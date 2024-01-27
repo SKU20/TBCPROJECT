@@ -10,7 +10,7 @@
 [class^="fa-solid fa-"] {
   overflow-x: visible;
 }
-body {
+body { 
   margin: 0;
   padding: 0;
   font-family: myFont, "Work Sans", sans-serif;
@@ -368,36 +368,56 @@ header {
   transform: rotate(180deg);
 }
 .end_container {
-  height: 270px;
-  width: 100%;
-  background-color: #1a1e1f;
-  justify-content: center;
-  align-items: center;
-}
-.box {
-  width: 90%;
-  height: 150px;
-  padding: 60px;
+  height: 225px;
   display: flex;
   justify-content: space-between;
-}
-.box img {
-  width: 140px;
-  height: 60px;
-  padding-left: 70px;
-}
-#copy a {
-  color: white;
-  cursor: pointer;
-  text-decoration: none;
-}
-#copy {
-  color: white;
-  font-size: 13px;
-  padding-top: 90px;
- padding-right: 150px;
+  padding: 10px;
+  background-color: #1a1e1f;
 }
 
+.box {
+  display: flex;
+  width: 90%;
+}
+
+.box img {
+  width: 146px;
+  height: 60px; /* Adjust the width as needed */
+  padding-left: 120px;
+  padding-top: 40px;
+}
+
+#copy {
+  color: white;
+  padding-top: 110px;
+  font-size: 13px;
+  transform: translateX(-125px);
+}
+#copy a{
+  color: white;
+  text-decoration: none;
+}
+
+#rules {
+  padding-top: 155px;
+  transform: translateX(-365px);
+  color: white;
+  font-size: 13px;
+  text-decoration: none;
+  width: auto;
+}
+
+.fa-brands {
+  padding-top: 50px;
+  font-size: 25px;
+  color: gray;
+  transform: translateX(10px);
+}
+
+.mes {
+  padding-top:140px ;
+  transform: translateX(180px);
+}
 #contact {
   width: 162px;
   height: 39px;
@@ -411,19 +431,6 @@ header {
 #contact:hover {
   color: black;
   background-color: #aaaaaa;
-}
-.mes{
-  padding-top:110px;
-  padding-right: 80px;
-}
-.fa-brands{
-  font-size: 28px;
-  color: gray;
-  overflow-x:visible;
-}
-.fa-facebook{
-  padding-left: 50px;
-
 }
 @media only screen and (max-width: 700px) {
   * {
@@ -621,6 +628,7 @@ header {
     height: 300px;
   }
   .fa-brands {
+    padding-right: 90px;
   }
   .fa-facebook {
     left: 100px;
