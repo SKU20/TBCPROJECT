@@ -1,3 +1,5 @@
+
+
 @font-face {
     font-family: myFont;
     src: url(bpg_mrgvlovani_caps_2010.ttf);
@@ -20,11 +22,19 @@ header {
     height: 64px;
     font-family:myFont, 'Work Sans', sans-serif;
     transition: background-color 0.3s ease;
-    z-index: 1000;
     width: 100%;
     position: fixed;
     top: 0;
     min-height: 64px;
+}
+#menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: gray;
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #1a1e1f;
 }
 
 #logo {
@@ -57,12 +67,23 @@ header {
 
 .page_picture {
     margin-top: 80px; 
+    width: 100%;
 }
 
 .page_picture img {
     width: 100%; 
-    height: auto;
-    display: block; 
+    height: auto; 
+    background-size: cover;
+}
+.page_picture h1 {
+  display: flex;
+  position:absolute;
+  top: 28%;
+  left: 41%;
+  transform: translate(-50%, -50%);
+  color: white;
+  margin: 0;
+  font-size: 33px;
 }
 .middle_text {
 text-align: center;
@@ -217,8 +238,6 @@ line-height: 1.5;
     cursor: pointer;
     font-size: 48px;
     color: white;
-    z-index: 2;
-    background-color: #2b2b2b;
     padding: 20px;
     border-radius: 5px;
     bottom: 90px;
@@ -241,10 +260,6 @@ line-height: 1.5;
   #prev:hover {
     color: #9c9b9b;
   }
-  
-  
-  
-  
   #slider-container span {
     color: white;
     font-size: 24px;
@@ -421,4 +436,207 @@ line-height: 1.5;
       height: 40px;
       width: 100%;
       background-color: #161616;
+  }
+  @media only screen and  (max-width:700px) {
+*{
+  overflow-x: hidden;
+}
+    body {
+      margin: 0; /* Reset margin */
+      padding: 0; /* Reset padding */
+      overflow-x: hidden; /* Hide horizontal overflow */
+      width: 100%; /* Ensure body takes the full width of the viewport */
+    }
+    header {
+      height: 100px; 
+      padding: 5px; 
+      width: 100%;
+  }
+  #logo {
+    margin-left: 1%;
+    margin-top: 7px;
+}
+#navigation {
+  display: none; /* Hide the regular navigation */
+  flex-direction: column; /* Stack items vertically */
+  background-color: #1a1e1f;
+  width: 30%;
+  overflow: hidden;
+  height: 100vh;
+  right: 0;
+}
+
+#navigation.show {
+  display: flex; /* Show the navigation when it has the 'show' class */
+}
+
+#navigation a {
+  margin: 10px;
+  text-align:right; /* Center text in the navigation */
+}
+
+#menu-toggle {
+  display: block; /* Show the menu toggle button */
+}
+
+#menu-toggle {
+    display: block;
+    font-size: 40px;
+    padding-right: 30px;
+}
+.page_picture {
+  margin-top: 100px;
+  width: auto; /* Set the image container width to 100% */
+  overflow: hidden; /* Hide any potential overflow */
+}
+
+.page_picture img {
+  width:auto; /* Set the image width to 100% of its container */
+  height: auto; /* Maintain aspect ratio */
+  display: block; /* Ensure proper spacing and alignment */
+}
+.middle_text {  
+  display: flex;
+  line-height:2em;
+  }
+  .middle_text span {
+    width: 100%; /* Full width for screens with a maximum width of 700px or smaller */
+    margin-right: 0; /* Remove margin for smaller screens if needed */
+}
+  .courses_part {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px; 
+    background-color: #161616;
+    letter-spacing: 0;
+    justify-content: center;
+}
+
+.course_box {
+    border: 2px solid #555555;
+    border-radius: 8px;
+    max-width: 600px;    
+    margin-bottom:10px;
+    margin-left: 7%;
+    font-size: 30px;
+}
+.courses_tag{
+  font-size: 50px;
+}
+.courses_tag span{
+  left: 50px;
+}
+.course_name{
+  margin-bottom: -5px;
+}
+.registration_status {
+  font-size: 27px;
+}     
+.course_details{
+  font-size: 41px;
+  margin-top: -50px;
+  overflow-x: visible;
+  
+}
+.course_details a{
+  font-size: 28px;
+}
+#more{
+  position: relative;
+  right: 60px;
+  font-size: 25px;
+}
+#prev {
+  display: none;
+}
+
+#next {
+  display: none;
+}
+#slider-container {
+  max-width: 700px;
+  display: grid;
+    margin-bottom: 50px;
+}
+.dots-container {
+  position: relative;
+  top: -10px;
+  margin-bottom: 30px;
+}
+#slider-container span {
+margin-left: 5%;
+font-size: 25px;
+}
+#slider-wrapper {
+  display: flex;
+  flex-direction: column; /* Set flex-direction to column */
+  transition: transform 0.5s ease-in-out;
+  margin-top: 90px;
+}
+.fa-brands{
+  font-size: 35px;
+  color: gray;
+  position: relative;
+  left: -230px;
+  border-radius: 50%;
+  overflow-x: visible;
+}
+.fa-facebook{
+  left:-210px;
+}
+#contact{
+  width: 162px;
+  height: 39px;
+  color: white;
+  background-color: #00aef3;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  position: relative;
+  right: 450px;
+}
+.FAQ_container {
+  height: 700px;
+  width: 100%;
+  padding-top: 50px ;
+  padding-left: 50px;
+}
+.FAQ_wrapper{
+  max-width: 800px;
+}
+.FAQ_wrapper span {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+.FAQ_wrapper a {
+  right: 280px;
+  margin-top: 1px;
+  font-size: 23px;
+}
+.question {
+  width: 610px;
+  justify-content: flex-start; /* Change from space-between to flex-start */
+  height: auto;
+  padding-top: 2rem;
+  margin-bottom: 10px; 
+  justify-content: center;/* Add margin for spacing between questions and links */
+  font-size: 30px;
+  text-align: left;
+  padding-bottom: 10px;
+  text-decoration: none;
+}
+.question i {
+  margin-left: 5px;
+}
+.end_container{
+  overflow-x: visible;
+  height: 300px;
+}
+.fa-brands{
+
+}
+.fa-facebook{
+  left:100px;
+}
   }

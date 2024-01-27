@@ -1,13 +1,19 @@
-window.addEventListener('scroll', function() {
+function handleScroll() {
     var header = document.getElementById('main-header');
     var scrollPosition = window.scrollY || window.pageYOffset;
 
-    if (scrollPosition > 0) {
-        header.style.backgroundColor = 'rgba(33, 33, 33, 0.9)';
-    } else {
-        header.style.backgroundColor = 'rgba(26, 30, 31, 1)';
+    if (window.innerWidth > 700) { 
+        if (scrollPosition > 0) {
+            header.style.backgroundColor = 'rgba(33, 33, 33, 0.9)';
+        } else {
+            header.style.backgroundColor = 'rgba(26, 30, 31, 1)';
+        }
     }
-});
+}
+
+// Add a listener for scroll events
+window.addEventListener('scroll', handleScroll);
+
 const sliderWrapper = document.getElementById('slider-wrapper');
 const prevButton = document.getElementById('prev');
 const nextButton = document.getElementById('next');
@@ -114,9 +120,37 @@ icon.classList.toggle('rotated');
 var expandedPanels = document.querySelectorAll('.pannel.active');
 if (expandedPanels.length > 0) {
   container.style.height = (container.clientHeight + pannel.scrollHeight) + 'px';
-} else {
-  container.style.height = 450 + 'px';
+} else if (window.innerWidth > 600)  {
+    
+  container.style.height = 700 + 'px';
+}else{
+    container.style.height = 450 + 'px';
 }
 });
 });
 });
+
+document.getElementById("menu-toggle").addEventListener("click", function () {
+    var navigation = document.getElementById("navigation");
+    navigation.classList.toggle("show");
+});
+
+let prevScrollPos = window.pageYOffset;
+        const header = document.getElementById('main-header');
+        const menuColor = document.getElementById('menu-toggle');
+        if(window.innerWidth <= 700){
+        window.onscroll = function() {
+            const currentScrollPos = window.pageYOffset;
+
+            if (prevScrollPos > currentScrollPos) {
+                // Scrolling up
+                header.style.transform = 'translateY(0)';
+            } else {
+                menuColor.style.backgroundColor = 'rgba(33, 33, 33, 0.9)';
+                header.style.backgroundColor = 'rgba(33, 33, 33, 0.9)';
+                header.style.transform = 'translateY(-100%)';
+            }
+
+            prevScrollPos = currentScrollPos;
+        };
+    }
