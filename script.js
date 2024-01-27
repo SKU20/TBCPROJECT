@@ -120,7 +120,7 @@ icon.classList.toggle('rotated');
 var expandedPanels = document.querySelectorAll('.pannel.active');
 if (expandedPanels.length > 0) {
   container.style.height = (container.clientHeight + pannel.scrollHeight) + 'px';
-} else if (window.innerWidth > 600)  {
+} else if (window.innerWidth <= 700)  {
     
   container.style.height = 700 + 'px';
 }else{
