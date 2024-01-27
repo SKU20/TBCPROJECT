@@ -1,0 +1,424 @@
+@font-face {
+    font-family: myFont;
+    src: url(bpg_mrgvlovani_caps_2010.ttf);
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family:myFont, 'Work Sans', sans-serif;
+    background-color: #2b2b2b;
+    overflow-x: hidden;
+}
+
+header {
+    background-color: #1a1e1f; 
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 64px;
+    font-family:myFont, 'Work Sans', sans-serif;
+    transition: background-color 0.3s ease;
+    z-index: 1000;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    min-height: 64px;
+}
+
+#logo {
+    margin-left: 19%;
+    margin-top: 7px;
+}
+
+#logo img {
+    height: 57px;
+}
+
+#navigation {
+    display: flex;
+    gap: 50px;
+    margin-right: 22%;
+}
+
+#navigation a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 15px;
+    transition: color 0.3s ease;
+    font-weight: 400;
+}
+
+#navigation a:hover {
+    color: #1486e0;
+}
+
+.page_picture {
+    margin-top: 80px; 
+}
+
+.page_picture img {
+    width: 100%; 
+    height: auto;
+    display: block; 
+}
+.middle_text {
+text-align: center;
+display: flex;
+flex-direction: column;
+padding: 50px;
+align-items: center;
+line-height: 1.5;
+}
+
+.middle_text span {
+    color: #fff; 
+    font-size: 27px;
+    text-align: left; 
+    display: block; 
+    margin-bottom: 10px; 
+    width: 62%;
+    margin-right: 18px;
+    overflow-wrap: break-word;
+}
+#more{
+    text-decoration: none;
+    color:#00aef3;
+    margin-right: 53%;
+    margin-top: 30px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    font-size: 25px;
+}
+#more:hover{
+    color:rgb(192, 185, 185);
+}
+.courses_tag{
+    background-color: #161616;
+    color:white;
+    padding-top: 40px;
+    font-size: 24px;
+    padding-bottom: 60px;
+}
+.courses_tag span{
+    display: grid;
+    position: relative;
+    left: 19.5%;
+}
+.courses_part {
+    display: grid;
+    grid-template-columns: repeat(3, 330px);
+    gap: 20px; 
+    background-color: #161616;
+    letter-spacing: 0;
+    justify-content: center;
+}
+
+.course_box {
+    border: 0.05px solid #555555;
+    border-radius: 5px;
+    max-width: 300px;    
+    margin-bottom:10px;
+}
+
+.course_photo {
+    width: 100%;
+    height: auto;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.course_name {
+    color: white;
+    font-weight: bold;
+    margin: 10px 0;
+    margin-bottom: 10px;
+    padding: 20px;
+}
+
+.registration_status {
+    font-size: 14px;
+    color: white; 
+    margin-bottom: 43px;
+    padding: 20px;
+}
+
+.course_details {
+    font-size: 16px;
+    color: #00aeef;
+    text-decoration: none;
+    padding: 20px;
+}
+.course_details a {
+    font-size: 17px;
+    color: #00aeef;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    padding: 20px;
+}
+.course_details a:hover{
+    color: #0080b0;
+}
+#fixed_one{
+    margin-bottom: 29px;
+}
+#slider-container {
+    width: 1040px;
+    overflow: hidden;
+    position: relative;
+    margin: 0 auto;
+    margin-top: 30px;
+    height: 190px;
+    overflow: hidden;
+  }
+  
+  #slider-wrapper {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    margin-top: 90px;
+  }
+  
+  .slide {
+    width: 400px;
+    flex: 0 0 350px;
+    display: flex;
+    opacity: 0; 
+    transition: opacity 1s ease-in-out;
+  }
+  
+  .transition {
+    transition: opacity 1s ease-out;
+  }
+  
+  .slide.active {
+    opacity: 1; 
+  }
+  
+  .slide.next, .slide.prev {
+    opacity: 0; 
+  }
+  
+  .slide.next.left, .slide.prev.right, .slide.active {
+    opacity: 1; 
+  }
+  
+  .slide img {
+    max-width: 315px;
+    height: 64px;
+  }
+  
+  #prev,
+  #next {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    font-size: 48px;
+    color: white;
+    z-index: 2;
+    background-color: #2b2b2b;
+    padding: 20px;
+    border-radius: 5px;
+    bottom: 90px;
+  }
+  
+  #prev {
+    margin: 0 90% 20px 0; 
+    left: 80px;
+  }
+  
+  #next {
+    margin-right: calc(20px - 20px);
+    right: 80px;
+  }
+  
+  #next:hover {
+    color: #9c9b9b;
+  }
+  
+  #prev:hover {
+    color: #9c9b9b;
+  }
+  
+  
+  
+  
+  #slider-container span {
+    color: white;
+    font-size: 24px;
+  }
+  
+  #number7 {
+    position: relative;
+    left: 40%;
+  }
+  
+  .dots-container {
+    position: relative;
+    bottom: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .dot {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: white;
+    margin: 0 5px;
+    cursor: pointer;
+    position: relative;
+  }
+  .animate-slide {
+    animation: slideAnimation 1s ease-in-out;
+  }
+  
+  @keyframes slideAnimation {
+    from {
+      transform: translate(20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  .FAQ_container{
+      width: 100%;
+      height: 450px;
+      background-color:#161616 ;
+      transition: height 0.3s ease;
+    overflow: hidden;
+  }
+  .FAQ_wrapper{
+      max-width: 900px;
+      box-sizing: border-box;
+      margin: auto;
+      align-items: center;
+  }
+  .FAQ_wrapper  a {
+      overflow: hidden;
+      color:#00aeef ;
+      text-decoration: none;
+      display: inline-block;
+      max-width: 200px;
+      white-space: nowrap;
+      font-size: 20px;
+      margin-top: 107px;
+      transition: color 0.3s ease;
+  }
+  .FAQ_wrapper  a:hover {
+      color:#aaaaaa;
+  }
+  .FAQ_wrapper span {
+      margin-right: 44%;
+      font-size: 20px;
+      color: white;
+  }
+  
+  .question{
+      background-color:#161616 ;
+      color: white;
+      cursor: pointer;
+      width: 100%;
+      height: 80px;
+      border-color: white;
+      border:none;
+      border-bottom: 1px solid #353131;
+      outline: none;
+      display: flex;
+      justify-content: space-between;
+      padding-top: 2rem ;
+      font-size: 18px;
+  }
+  
+  .pannel p{
+      color: white;
+      font-size: 13px;
+      display: none;
+      transition: max-height 0.3s ease;
+  }
+  .pannel.active {
+    max-height: 1000px; 
+  }
+  .rotated {
+        transform: rotate(180deg);
+      }
+  .end_container{
+      height: 230px;
+      width: 100%;
+      background-color: #1a1e1f;
+      justify-content: center;
+      align-items: center;
+  }
+  .box{
+      width: 980px;
+      height: auto;
+      padding: 60px;
+      padding-left: 20%;
+      display: flex;
+      justify-content: space-between;
+  }
+  .box img{
+      width: 140px;
+      height: auto;
+  }
+  #copy a{
+      color: white;
+      cursor: pointer;
+      text-decoration: none;
+  }
+  #copy{
+      position: relative;
+      top: 70px;
+      right: 16%;
+      color: white;
+      font-size: 13px;
+  }
+  #rules{
+      text-decoration: none;
+      color: white;
+      position: relative;
+      top: 110px;
+      right: 44%;
+      transition: color 0.3s ease;
+  }
+  #rules:hover{
+      color: darkgray;
+  }
+  #contact{
+      width: 162px;
+      height: 39px;
+      color: white;
+      background-color: #00aef3;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: color 0.3s ease;
+      position: relative;
+      top: 90px;
+  }
+  #contact:hover{
+      color: black;
+      background-color:#aaaaaa ;
+  }
+  .fa-brands{
+      font-size: 35px;
+      color: gray;
+      cursor:pointer;
+      position: relative;
+      left: 190px;
+      border-radius: 50%;
+  }
+  .fa-facebook{
+      left:210px;
+  }
+  .empty{
+      height: 40px;
+      width: 100%;
+      background-color: #161616;
+  }
