@@ -481,11 +481,14 @@ header {
     overflow: hidden;
     height: 100vh;
     right: 0;
-  }
-
-  #navigation.show {
-    display: flex;
-  }
+    position: fixed;
+    top: 0;
+    z-index: 1000; /* Ensure it's on top of other elements */
+    transition: transform 0.3s ease; /* Add transition for smoother animation */
+}
+#navigation.show {
+  transform: translateX(0); /* Show the navigation menu */
+}
 
   #navigation a {
     text-align: right;
@@ -634,29 +637,55 @@ header {
     transition: transform 0.5s ease-in-out;
     overflow-y: hidden;
   }
+  #number1{
+    position: relative;
+    left: 160px;
+  }
   #number2{
     position: relative;
     bottom: 200px;
+    left: 160px;
+  }
+  #number3{
+    position: relative;
+    bottom: 420px;
+    font-size: 15px;
+    left: 160px;
+  }
+  #number4{
+    position: relative;
+    left: 160px;
+  }
+  #number5{
+    position: relative;
+    bottom: 200px;
+    left: 160px;
+  }
+  #number6{
+    position: relative;
+    bottom: 420px;
+    left: 160px;
   }
   #number7 {
     position: relative;
-    left: 10px;
     top: 40px;
+    left: 160px;
   }
+
   .fa-brands {
     font-size: 35px;
     color: gray;
     position: relative;
-    left: -230px;
+    left: 20px;
     border-radius: 50%;
     overflow-x: visible;
   }
   .fa-facebook {
-    left: -210px;
+     left: 10px;
   }
   #contact {
-    width: 162px;
-    height: 39px;
+    width: 15.82vw;
+    height: 3.809vw;
     color: white;
     background-color: #00aef3;
     border: none;
@@ -664,19 +693,23 @@ header {
     cursor: pointer;
     transition: color 0.3s ease;
     position: relative;
-    right: 450px;
+    left: 20.367vw;
+    bottom: 10.766vw;
   }
   .FAQ_container {
-    height: 100vw;
+    height: 110vw;
     width: 100%;
     padding-top: 7.143vw;
-    padding-left: 7.143vw;
+    padding-left:6vw;
+    text-wrap: wrap;
   }
   .FAQ_wrapper {
     max-width: 114.286vw;
+    height: 100vw;
   }
   .FAQ_wrapper span {
-    font-size: 4.286vw;
+    display: inline-flex;
+    font-size: 4vw;
     margin-bottom: 1.429vw;
   }
   .FAQ_wrapper a {
@@ -694,9 +727,18 @@ header {
     font-size: 4.286vw;
     text-align: left;
     padding-bottom: 1.429vw;
-    text-decoration: none;
+    text-decoration:none;
   }
-  .question i {
-    margin-left: 0.714vw;
+  .end_container{
+    height: 36.585vw;
   }
+  .end_container img{
+    left: 3.659vw;
+  }
+#copy{
+  right: 13.415vw;
+}
+#rules{
+  right: 43.293vw;
+}
 }
