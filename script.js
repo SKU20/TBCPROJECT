@@ -120,9 +120,9 @@ icon.classList.toggle('rotated');
 var expandedPanels = document.querySelectorAll('.pannel.active');
 if (expandedPanels.length > 0) {
   container.style.height = (container.clientHeight + pannel.scrollHeight) + 'px';
-} else if (window.innerWidth <1281)  {
+} else if (window.innerWidth <981)  {
     
-  container.style.height = 700 + 'px';
+  container.style.height = 600 + 'px';
 }else{
     container.style.height = 450 + 'px';
 }
@@ -147,10 +147,15 @@ let prevScrollPos = window.pageYOffset;
                 header.style.transform = 'translateY(0)';
             } else {
                 menuColor.style.backgroundColor = 'rgba(33, 33, 33, 0.9)';
-                header.style.backgroundColor = 'rgba(33, 33, 33, 0.9)';
+                header.style.backgroundColor = 'rgba(33, 33, 33, 1)';
                 header.style.transform = 'translateY(-100%)';
             }
 
             prevScrollPos = currentScrollPos;
         };
     }
+
+    document.getElementById('menu-toggle').addEventListener('click', function () {
+        document.getElementById('navigation').classList.toggle('show');
+    });
+    
