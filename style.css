@@ -30,7 +30,7 @@ header {
   top: 0;
   text-align: center;
   justify-content: center;
-  height: 62px;
+  height: 50px;
   overflow-y: hidden;
 }
 #menu-toggle {
@@ -44,7 +44,6 @@ header {
 }
 
 #logo {
-  padding-top: 5px;
   padding-right: 850px;
 }
 
@@ -80,6 +79,8 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
+  height: 450px;
+
 }
 
 .page_picture img {
@@ -94,8 +95,11 @@ header {
   bottom: 250px;
   right: 170px;
   padding: 0;
+  font-weight: bolder;
 }
 .middle_text {
+  position: relative;
+  bottom: 50px;
   text-align: left;
   display: flex;
   flex-direction: column;
@@ -124,7 +128,8 @@ header {
   font-weight: bold;
   transition: color 0.3s ease;
   font-size: 25px;
-  padding-right: 850px;
+  position: relative;
+  right: 430px;
 }
 #more:hover {
   color: rgb(192, 185, 185);
@@ -155,7 +160,7 @@ header {
   border: 0.05px solid #555555;
   border-radius: 5px;
   max-width: 300px;
-  margin-bottom: 10px;
+  margin-bottom: 60px;
 }
 
 .course_photo {
@@ -380,29 +385,26 @@ header {
 }
 .end_container {
   height: 225px;
-  display: flex;
-  justify-content: space-between;
+  justify-content:center;
+  align-items: center;
+  text-align: center;
   padding: 10px;
   background-color: #1a1e1f;
 }
 
-.box {
-  display: flex;
-  width: 90%;
-}
-
-.box img {
-  width: 11vw;
-  height: 60px; 
-  padding-left: 9vw;
-  padding-top: 2.5vw;
+.end_container img {  
+  position: relative;
+  width: 156px;
+  top: 50px;
+  right: 100px;
 }
 
 #copy {
+  position: relative;
   color: white;
-  padding-top: 8vw;
   font-size: 13px;
-  transform: translateX(-9.5vw);
+  top: 80px;
+  right: 240px;
 }
 #copy a{
   color: white;
@@ -410,25 +412,26 @@ header {
 }
 
 #rules {
-  padding-top: 11vw;
-  transform: translateX(-27vw);
   color: white;
-  font-size: 0.8vw;
+  font-size: 13px;
   text-decoration: none;
-  width: auto;
+  position: relative;
+  top: 120px;
+  right: 487px;
+  transition: color 0.3s ease;
 }
-
-.fa-brands {
-  padding-top: 3vw;
-  font-size: 25px;
+#rules:hover{
   color: gray;
-  transform: translateX(10px);
+}
+.fa-brands {
+  position: relative;
+  font-size: 35px;
+  color: gray;
+  left: 250px;
+  top: 30px;
+  overflow: hidden;
 }
 
-.mes {
-  padding-top:9vw ;
-  transform: translateX(18.75vw);
-}
 #contact {
   width: 162px;
   height: 39px;
@@ -438,33 +441,41 @@ header {
   border-radius: 8px;
   cursor: pointer;
   transition: color 0.3s ease;
+  position: relative;
+  top:100px;
+  left: 90px;
 }
 #contact:hover {
   color: black;
   background-color: #aaaaaa;
 }
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 980px) {
   * {
     overflow-x: hidden;
   }
   body {
-    margin: 0; /* Reset margin */
-    padding: 0; /* Reset padding */
-    overflow-x: hidden; /* Hide horizontal overflow */
-    width: 100%; /* Ensure body takes the full width of the viewport */
-  }
-  header {
-    height: 100px;
-    padding: 5px;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
     width: 100%;
   }
+  header {
+    height: 18vw;
+    padding: 0.391vw;
+    width: 100%;
+    align-items: center;
+  }
   #logo {
-    margin-left: 1%;
-    margin-top: 7px;
+    position: relative;
+    top: 2.344vw;
+  }
+  #logo img {
+    height: 13.281vw;
+    width: 52.344vw;
   }
   #navigation {
-    display: none; /* Hide the regular navigation */
-    flex-direction: column; /* Stack items vertically */
+    display: none;
+    flex-direction: column;
     background-color: #1a1e1f;
     width: 30%;
     overflow: hidden;
@@ -473,46 +484,85 @@ header {
   }
 
   #navigation.show {
-    display: flex; /* Show the navigation when it has the 'show' class */
+    display: flex;
   }
 
   #navigation a {
-    margin: 10px;
-    text-align: right; /* Center text in the navigation */
-  }
-
-  #menu-toggle {
-    display: block; /* Show the menu toggle button */
+    text-align: right;
+    height: 100vh;
   }
 
   #menu-toggle {
     display: block;
-    font-size: 40px;
-    padding-right: 30px;
+    position: relative;
+    left: 85.938vw;
+    bottom: 7.813vw;
+    background-color: #1a1e1f;
+    overflow-y: hidden;
   }
-  .page_picture {
-    margin-top: 100px;
-    width: auto; /* Set the image container width to 100% */
-    overflow: hidden; /* Hide any potential overflow */
+  #menu-toggle i{
+    font-size: 7.813vw;
+    color: white;
+    background-color: #1a1e1f;
   }
 
+  #menu-toggle {
+    display: block;
+    font-size: 3.125vw;
+    padding-right: 2.344vw;
+  }
+  .page_picture {
+    margin-top: 18.7vw;
+    height: 95vw;
+  }
+  
   .page_picture img {
-    width: auto; /* Set the image width to 100% of its container */
-    height: auto; /* Maintain aspect ratio */
-    display: block; /* Ensure proper spacing and alignment */
+    width: 150%;
+    object-fit: cover;
+    height: 92vw;
+  }
+  .page_picture span {
+    position: relative;
+    color: white;
+    font-size: 8.163vw;
+    bottom: 47.959vw;
+    left: 3.061vw;
+    height: 44.898vw;
+    font-weight: bolder;
+    overflow: hidden;
   }
   .middle_text {
-    display: flex;
-    line-height: 2em;
+    position: relative;
+    text-align: left;
+    flex-direction: column;
+    line-height: 1.5;
+    width: 300%;
+    bottom: 24.272vw;
+    right: 97.087vw;
+    height: 121.359vw;
   }
+  
   .middle_text span {
-    width: 100%; /* Full width for screens with a maximum width of 700px or smaller */
-    margin-right: 0; /* Remove margin for smaller screens if needed */
+    color: #fff;
+    font-size: 4.612vw;
+    text-align: left;
+    display: block;
+    width: 84.951vw;
+    padding-right: 4.854vw;
+    height: 121.359vw;
+  }
+  #more {
+    position: relative;
+    text-decoration: none;
+    color: #00aef3;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    padding-right: 157.767vw;
   }
   .courses_part {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 20px;
+    gap: 2vw;
     background-color: #161616;
     letter-spacing: 0;
     justify-content: center;
@@ -521,35 +571,42 @@ header {
   .course_box {
     border: 2px solid #555555;
     border-radius: 8px;
-    max-width: 600px;
-    margin-bottom: 10px;
+    max-width: 86.735vw;
+    margin-bottom: 5vw;
     margin-left: 7%;
-    font-size: 30px;
+    font-size: 2.344vw;
   }
   .courses_tag {
-    font-size: 50px;
+    font-size: 3.906vw;
   }
   .courses_tag span {
-    left: 50px;
+    position: relative;
+    left: 6.633vw;
+    width: 71.429vw;
+    font-size: 6.122vw;
   }
   .course_name {
-    margin-bottom: -5px;
+    margin-bottom: -0.391vw;
+    font-size: 3.776vw;
+    margin: 3.061vw;
   }
   .registration_status {
-    font-size: 27px;
+    font-size: 3.571vw;
+    margin: 3.061vw;
   }
   .course_details {
-    font-size: 41px;
-    margin-top: -50px;
+    font-size: 3.571vw;
+    margin-top: -3.906vw;
     overflow-x: visible;
+    margin: 3.061vw;
   }
   .course_details a {
-    font-size: 28px;
+    font-size: 3.571vw;
   }
   #more {
     position: relative;
-    right: 60px;
-    font-size: 25px;
+    right: 4.688vw;
+    font-size: 1.953vw;
   }
   #prev {
     display: none;
@@ -559,14 +616,13 @@ header {
     display: none;
   }
   #slider-container {
-    max-width: 700px;
+    max-width: 54.688vw;
     display: grid;
-    margin-bottom: 50px;
+    height: 600px;
   }
   .dots-container {
     position: relative;
-    top: -10px;
-    margin-bottom: 30px;
+    margin-bottom: 2.344vw;
   }
   #slider-container span {
     margin-left: 5%;
@@ -574,9 +630,18 @@ header {
   }
   #slider-wrapper {
     display: flex;
-    flex-direction: column; /* Set flex-direction to column */
+    flex-direction: column;
     transition: transform 0.5s ease-in-out;
-    margin-top: 90px;
+    overflow-y: hidden;
+  }
+  #number2{
+    position: relative;
+    bottom: 200px;
+  }
+  #number7 {
+    position: relative;
+    left: 10px;
+    top: 40px;
   }
   .fa-brands {
     font-size: 35px;
@@ -602,46 +667,36 @@ header {
     right: 450px;
   }
   .FAQ_container {
-    height: 700px;
+    height: 100vw;
     width: 100%;
-    padding-top: 50px;
-    padding-left: 50px;
+    padding-top: 7.143vw;
+    padding-left: 7.143vw;
   }
   .FAQ_wrapper {
-    max-width: 800px;
+    max-width: 114.286vw;
   }
   .FAQ_wrapper span {
-    font-size: 30px;
-    margin-bottom: 10px;
+    font-size: 4.286vw;
+    margin-bottom: 1.429vw;
   }
   .FAQ_wrapper a {
-    right: 280px;
-    margin-top: 1px;
-    font-size: 23px;
+    right: 40vw;
+    margin-top: 0.143vw;
+    font-size: 3.286vw;
   }
   .question {
-    width: 610px;
-    justify-content: flex-start; /* Change from space-between to flex-start */
+    width: 87.143vw;
+    justify-content: flex-start; 
     height: auto;
     padding-top: 2rem;
-    margin-bottom: 10px;
-    justify-content: center; /* Add margin for spacing between questions and links */
-    font-size: 30px;
+    margin-bottom: 1.429vw;
+    justify-content: center; 
+    font-size: 4.286vw;
     text-align: left;
-    padding-bottom: 10px;
+    padding-bottom: 1.429vw;
     text-decoration: none;
   }
   .question i {
-    margin-left: 5px;
-  }
-  .end_container {
-    overflow-x: visible;
-    height: 300px;
-  }
-  .fa-brands {
-    padding-right: 90px;
-  }
-  .fa-facebook {
-    left: 100px;
+    margin-left: 0.714vw;
   }
 }
