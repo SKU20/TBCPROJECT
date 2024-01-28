@@ -21,17 +21,17 @@ body {
 header {
   background-color: #1a1e1f;
   color: #fff;
-  padding: 10px;
-  display: flex;
-  justify-content: space-between;
+  padding: 1.2em;
   align-items: center;
-  height: 64px;
   font-family: myFont, "Work Sans", sans-serif;
   transition: background-color 0.3s ease;
   width: 100%;
   position: fixed;
   top: 0;
-  min-height: 64px;
+  text-align: center;
+  justify-content: center;
+  height: 62px;
+  overflow-y: hidden;
 }
 #menu-toggle {
   display: none;
@@ -44,26 +44,30 @@ header {
 }
 
 #logo {
-  padding-left: 80px;
+  padding-top: 5px;
+  padding-right: 850px;
 }
 
 #logo img {
   height: 60px;
+  width: 210px;
 }
 
 #navigation {
-  display: flex;
-  gap: 50px;
-  padding-right: 110px;
+  position: relative;
+  left:300px;
+  bottom: 50px;
 }
 
 #navigation a {
+  gap: 350px;
   color: #fff;
   text-decoration: none;
   font-weight: 400;
   font-size: 15px;
   transition: color 0.3s ease;
   font-weight: 400;
+  margin-right: 40px; 
 }
 
 #navigation a:hover {
@@ -73,41 +77,46 @@ header {
 .page_picture {
   margin-top: 80px;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .page_picture img {
   width: 100%;
-  height: auto;
-  background-size: cover;
+  height: 352px;
+  object-fit: cover;
 }
-.page_picture h1 {
-  display: flex;
-  position: absolute;
-  top: 38%;
-  left: 36%;
-  transform: translate(-50%, -50%);
+.page_picture span {
+  position: relative;
   color: white;
-  margin: 0;
   font-size: 33px;
+  bottom: 250px;
+  right: 170px;
+  padding: 0;
 }
 .middle_text {
   text-align: left;
   display: flex;
   flex-direction: column;
-  padding: 50px;
-  padding-left: 100px;
   line-height: 1.2;
   box-sizing: content-box;
+  width: 100%;
+  height: 300px;
+  justify-content: center;
+  align-items: center;
 }
 
 .middle_text span {
   color: #fff;
-  font-size: 27px;
+  font-size: 25px;
   text-align: left;
   display: block;
   margin-bottom: 30px;
-  width: 100%;
+  width: 1000px;
   overflow-wrap: break-word;
+  min-height: 0;
+  padding-right: 20px;
 }
 #more {
   text-decoration: none;
@@ -115,21 +124,23 @@ header {
   font-weight: bold;
   transition: color 0.3s ease;
   font-size: 25px;
+  padding-right: 850px;
 }
 #more:hover {
   color: rgb(192, 185, 185);
 }
 .courses_tag {
+  display: grid;
   background-color: #161616;
   color: white;
   padding-top: 40px;
   font-size: 24px;
   padding-bottom: 60px;
   width: 100%;
+  text-align: center;
 }
 .courses_tag span {
-  display: grid;
-  padding-left: 100px;
+  padding-right: 750px;
 }
 .courses_part {
   display: grid;
@@ -276,7 +287,7 @@ header {
 
 .dots-container {
   position: relative;
-  bottom: 100px;
+  bottom: 70px;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -381,17 +392,17 @@ header {
 }
 
 .box img {
-  width: 146px;
-  height: 60px; /* Adjust the width as needed */
-  padding-left: 120px;
-  padding-top: 40px;
+  width: 11vw;
+  height: 60px; 
+  padding-left: 9vw;
+  padding-top: 2.5vw;
 }
 
 #copy {
   color: white;
-  padding-top: 110px;
+  padding-top: 8vw;
   font-size: 13px;
-  transform: translateX(-125px);
+  transform: translateX(-9.5vw);
 }
 #copy a{
   color: white;
@@ -399,24 +410,24 @@ header {
 }
 
 #rules {
-  padding-top: 155px;
-  transform: translateX(-365px);
+  padding-top: 11vw;
+  transform: translateX(-27vw);
   color: white;
-  font-size: 13px;
+  font-size: 0.8vw;
   text-decoration: none;
   width: auto;
 }
 
 .fa-brands {
-  padding-top: 50px;
+  padding-top: 3vw;
   font-size: 25px;
   color: gray;
   transform: translateX(10px);
 }
 
 .mes {
-  padding-top:140px ;
-  transform: translateX(180px);
+  padding-top:9vw ;
+  transform: translateX(18.75vw);
 }
 #contact {
   width: 162px;
